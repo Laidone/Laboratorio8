@@ -18,9 +18,11 @@ public class Pessoa : IComparable<Pessoa>
         get { return minhaIdade; }
         set { minhaIdade = value; }
     }
-    public int CompareTo(Pessoa outro) 
+    /*public int CompareTo(Pessoa outro) 
     { 
         return meuNome.CompareTo(outro.meuNome); 
+    }*/
+    public int CompareTo(Pessoa outro){
+        return minhaIdade.CompareTo(outro.minhaIdade);
     }
-
 }
