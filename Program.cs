@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+Nome: Laidone Mendes de Carvalho
+Laboratório 8
+*/
+
+using System;
 
 namespace Laboratorio8
 {
@@ -25,10 +30,22 @@ namespace Laboratorio8
             new Pessoa("Ana", 28),
             new Pessoa("Paulo", 20) 
         };
-        Array.Sort(lista2); 
+        /*Array.Sort(lista2); 
         Console.WriteLine("Array depois da ordenacao"); 
         for (int i = 0; i < lista2.Length; i++) 
         { 
+            Console.Write(lista2[i].Nome + " "); 
+        }
+        */
+        System.Console.WriteLine("Array Original\n");
+        for(int i = 0 ; i < lista2.Length; ++i){
+            Console.Write(lista2[i].Nome + " "); 
+        }
+        System.Console.WriteLine();
+        // Array usando Icompare e ordenando por idade
+        System.Console.WriteLine("Array usando o Icompare\n");
+        Array.Sort(lista2, new sortcompare());
+        for(int i = 0 ; i < lista2.Length; ++i){
             Console.Write(lista2[i].Nome + " "); 
         }
         }
