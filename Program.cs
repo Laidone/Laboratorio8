@@ -44,7 +44,15 @@ namespace Laboratorio8
         System.Console.WriteLine();
         // Array usando Icompare e ordenando por idade
         System.Console.WriteLine("Array usando o Icompare\n");
-        Array.Sort(lista2, new sortcompare());
+        System.Console.WriteLine("Array ordenada por idade");
+        //Array.Sort(lista2, new sortcompare());
+        Array.Sort(lista2, new Pessoa.sortcompare());
+        for(int i = 0 ; i < lista2.Length; ++i){
+            Console.Write(lista2[i].Nome + " "); 
+        }
+        System.Console.WriteLine("\n");
+        System.Console.WriteLine("Array ordenada pelo nome");
+        Array.Sort(lista2, new Pessoa.sortcompare_2());
         for(int i = 0 ; i < lista2.Length; ++i){
             Console.Write(lista2[i].Nome + " "); 
         }

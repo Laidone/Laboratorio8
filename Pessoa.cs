@@ -1,7 +1,44 @@
 using System;
+using System.Collections;
 
 public class Pessoa : IComparable<Pessoa>
 {
+    public class sortcompare : IComparer
+    {
+         int IComparer.Compare(object a, object b)
+        {
+            Pessoa p1 = (Pessoa)a;
+            Pessoa p2 = (Pessoa)b;
+
+            if(p1.Idade > p2.Idade){
+                return 1;
+            }
+            if(p1.Idade < p2.Idade){
+                return -1;
+            }
+            else{
+                return 0;
+            }
+        }    
+    }
+    public class sortcompare_2 : IComparer
+    {
+        int IComparer.Compare(object a, object b)
+        {
+            Pessoa p1 = (Pessoa)a;
+            Pessoa p2 = (Pessoa)b;
+
+            if(p1.Nome.CompareTo(p2.Nome) == 0){
+                return 0;
+            }
+            else if (p1.Nome.CompareTo(p2.Nome) > 0){
+                return 1;
+            }
+            else {
+                return -1;
+            }
+        }
+    }
     private string meuNome; 
     private int minhaIdade; 
     public Pessoa(string n, int i) 
