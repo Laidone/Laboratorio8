@@ -17,5 +17,5 @@ public class sortcompare : IComparer
             else{
                 return 0;
             }
-        }
-    }
+        }    
+}
